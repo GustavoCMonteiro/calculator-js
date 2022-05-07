@@ -1,0 +1,42 @@
+:root {
+  --bg-color-light: rgb(224, 224, 224);
+  --bg-color-dark: rgb(12, 12, 12);
+  --calc-color-light: rgb(145, 145, 145);
+  --calc-color-dark: rgb(44, 44, 44);
+  --button-color-light: rgb(39, 39, 39);
+  --button-color-dark: rgb(223, 223, 223);
+  --sp-button-color-light: rgb(16, 95, 46);
+  --sp-button-color-dark: rgb(51, 155, 91);
+}
+
+.bg-light {
+  background-color: var(--bg-color-light);
+}
+
+.bg-dark {
+  background-color: var(--bg-color-dark);
+}
+
+.calc-bg-light {
+  background-color: var(--calc-color-light);
+}
+
+.calc-bg-dark {
+  background-color: var(--calc-color-dark);
+}
+
+.button-light {
+  color: var(--button-color-light);
+}
+
+.button-dark {
+  color: var(--button-color-dark);
+}
+
+.sp-button-light {
+  color: var(--sp-button-color-light);
+}
+
+.sp-button-dark {
+  color: var(--sp-button-color-dark);
+}

@@ -1,0 +1,128 @@
+.container {
+  justify-content: center;
+  margin-top: 40px;
+}
+
+input {
+  all: unset;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.calc-body {
+  justify-content: center;
+  width: 300px;
+  border-radius: 30px;
+  padding: 40px 20px;
+  font-family: "IBM Plex Mono", monospace;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.295),
+    -2px -2px 1px rgba(255, 255, 255, 0.295);
+}
+
+.calc-display {
+  width: 260px;
+  height: 50px;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  text-align: end;
+  background-color: transparent;
+  border-radius: 50px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  box-shadow: inset 3px 3px 1px rgba(0, 0, 0, 0.295),
+    inset -3px -3px 1px rgba(255, 255, 255, 0.295);
+}
+
+.button,
+.button-zero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.295),
+    -2px -2px 1px rgba(255, 255, 255, 0.295);
+}
+
+.button:active,
+.button-zero:active {
+  box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.295),
+    inset -2px -2px 1px rgba(255, 255, 255, 0.295);
+}
+
+.button-zero {
+  width: 120px;
+  border-radius: 15px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(145, 145, 145);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.295),
+    -2px -2px 1px rgba(255, 255, 255, 0.295);
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(44, 44, 44);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(44, 44, 44);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.295),
+    -2px -2px 1px rgba(255, 255, 255, 0.295);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

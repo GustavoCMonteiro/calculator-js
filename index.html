@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora em JS</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/var.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body id="bg-body" class="bg-light">
+
+  <section class="grid container">
+    <div id="calc-body" class="calc-body flex calc-bg-light">
+      <div>
+        <div class="first-row">
+          <input id="calc-display" class="calc-display" type="text">
+        </div>
+        <div class="flex">
+          <div id="button-c" class="special button sp-button-light">C</div>
+          <div id="button-plus-minus" class="special button sp-button-light">+/-</div>
+          <div id="button-percent" class="special button sp-button-light">%</div>
+          <div id="button-slash" class="special button sp-button-light">/</div>
+        </div>
+        <div class="flex">
+          <div id="button-7" class="number button button-light">7</div>
+          <div id="button-8" class="number button button-light">8</div>
+          <div id="button-9" class="number button button-light">9</div>
+          <div id="button-x" class="special button sp-button-light">x</div>
+        </div>
+        <div class="flex">
+          <div id="button-4" class="number button button-light">4</div>
+          <div id="button-5" class="number button button-light">5</div>
+          <div id="button-6" class="number button button-light">6</div>
+          <div id="button-minus" class="special button sp-button-light">-</div>
+        </div>
+        <div class="flex">
+          <div id="button-1" class="number button button-light">1</div>
+          <div id="button-2" class="number button button-light">2</div>
+          <div id="button-3" class="number button button-light">3</div>
+          <div id="button-plus" class="special button sp-button-light">+</div>
+        </div>
+        <div class="flex">
+          <div id="button-zero" class="number button-zero button-light">0</div>
+          <div id="button-dot" class="special button button-light">.</div>
+          <div id="button-equal" class="special button sp-button-light">=</div>
+        </div>
+      </div>
+    </div>
+    <form>
+      <label class="switch">
+        <input id="checkbox" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </form>
+  </section>
+
+
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
