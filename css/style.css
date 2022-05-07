@@ -1,6 +1,12 @@
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 input {
@@ -132,4 +138,38 @@ input:checked + .slider:before {
   .slider {
     cursor: none;
   }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.links-redes {
+  text-align: center;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.links-redes a {
+  text-decoration: none;
+  width: 70px;
+  padding: 5px 15px;
+  font-size: 1.2rem;
+  background-color: rgb(48, 48, 48);
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.links-redes a:hover {
+  background-color: rgb(31, 31, 31);
 }

@@ -114,7 +114,7 @@ calcPlusMinus.addEventListener("click", () => {
 // calculator equal sign
 calcEqual.addEventListener("click", () => {
   if (calcDisplay.textContent == "") {
-    console.log("erro");
+    console.log("vazio");
   } else {
     equation(value1, operator, +calcDisplay.textContent);
     num1(0);
@@ -125,5 +125,3 @@ calcEqual.addEventListener("click", () => {
 calcClear.addEventListener("click", () => {
   calcDisplay.textContent = "";
 });
-
-console.log(Math.round(12.333));
