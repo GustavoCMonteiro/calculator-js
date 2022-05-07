@@ -120,11 +120,11 @@ input:checked + .slider:before {
 }
 
 .text-dark {
- font-size: 1.2rem;
- padding: 5px;
+  font-size: 1.2rem;
+  padding: 5px;
 }
 
-/* @media (max-width: 800px) {
+@media (max-width: 800px) {
   .button,
   .button-zero {
     cursor: none;
@@ -132,4 +132,4 @@ input:checked + .slider:before {
   .slider {
     cursor: none;
   }
-} */
+}
