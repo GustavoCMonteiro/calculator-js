@@ -57,15 +57,15 @@ input {
     -2px -2px 1px rgba(255, 255, 255, 0.295);
 }
 
+.button-zero {
+  width: 120px;
+  border-radius: 15px;
+}
+
 .button:active,
 .button-zero:active {
   box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.295),
     inset -2px -2px 1px rgba(255, 255, 255, 0.295);
-}
-
-.button-zero {
-  width: 120px;
-  border-radius: 15px;
 }
 
 .switch {
@@ -125,4 +125,12 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+
+@media (max-width: 800px) {
+  .button,
+.button-zero {  
+  cursor: none;
+}
 }
