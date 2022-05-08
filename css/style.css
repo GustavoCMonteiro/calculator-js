@@ -130,16 +130,6 @@ input:checked + .slider:before {
   padding: 5px;
 }
 
-@media (max-width: 800px) {
-  .button,
-  .button-zero {
-    cursor: none;
-  }
-  .slider {
-    cursor: none;
-  }
-}
-
 footer {
   position: absolute;
   bottom: 0;
@@ -172,4 +162,17 @@ footer p {
 
 .links-redes a:hover {
   background-color: rgb(31, 31, 31);
+}
+
+@media (max-width: 800px) {
+  .button,
+  .button-zero {
+    cursor: none;
+  }
+  .slider {
+    cursor: none;
+  }
+  .links-redes a {
+    font-size: 1rem;
+  }
 }
