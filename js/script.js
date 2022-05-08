@@ -137,6 +137,9 @@ calcPlusMinus.addEventListener("click", () => {
 calcEqual.addEventListener("click", () => {
   if (calcDisplay.textContent == "") {
     console.log("vazio");
+    calcDisplay.textContent = calcMiniDisplay.textContent;
+    num1(0);
+    sinal(0);
   } else {
     equation(value1, operator, +calcDisplay.textContent);
     num1(0);
@@ -149,4 +152,6 @@ calcEqual.addEventListener("click", () => {
 calcClear.addEventListener("click", () => {
   calcDisplay.textContent = "";
   calcMiniDisplay.textContent = "";
+  num1(0);
+  sinal(0);
 });
