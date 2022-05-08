@@ -52,52 +52,68 @@ calcEquation.forEach((button) =>
   button.addEventListener("click", function () {
     let tecla = button.textContent;
     if (tecla == "+") {
-      num1(+calcDisplay.textContent);
+      num1(+calcDisplay.textContent, "+");
       sinal("+");
-      calcDisplay.textContent = "";
     } else if (tecla == "-") {
-      num1(+calcDisplay.textContent);
+      num1(+calcDisplay.textContent, "-");
       sinal("-");
-      calcDisplay.textContent = "";
     } else if (tecla == "/") {
-      num1(+calcDisplay.textContent);
+      num1(+calcDisplay.textContent, "/");
       sinal("/");
-      calcDisplay.textContent = "";
     } else if (tecla == "x") {
-      num1(+calcDisplay.textContent);
+      num1(+calcDisplay.textContent, "x");
       sinal("x");
-      calcDisplay.textContent = "";
     } else if (tecla == "%") {
-      num1(+calcDisplay.textContent);
+      num1(+calcDisplay.textContent, "%");
       sinal("%");
-      calcDisplay.textContent = "";
     }
+    calcDisplay.textContent = "";
   })
 );
 
 let value1 = 0;
-let operator;
-let num1 = (value) => {
-  if (value == 0) {
-    value1 = 0;
+let num1 = (value, sinal) => {
+  if (value1 == 0) {
+    value1 = value;
   } else {
-    value1 += value;
+    if (sinal == "+") {
+      value1 += value;
+    } else if (sinal == "-") {
+      value1 -= value;
+    } else if (sinal == "/") {
+      value1 /= value;
+    } else if (sinal == "x") {
+      value1 *= value;
+    } else {
+      value1 = value;
+    }
   }
 };
 
-let sinal = (value) => (operator = value);
+let operator = 0;
+let sinal = (value) => {
+  if (value == 0) {
+    operator;
+  } else {
+    operator = value;
+  }
+};
 
 function equation(value1, sinal, value2) {
-  if (sinal == "+") {
-    calcDisplay.textContent = parseFloat((value1 + value2).toFixed(5));
-  } else if (sinal == "-") {
-    calcDisplay.textContent = parseFloat((value1 - value2).toFixed(5));
-  } else if (sinal == "/") {
-    calcDisplay.textContent = parseFloat((value1 / value2).toFixed(5));
-  } else if (sinal == "x") {
-    calcDisplay.textContent = parseFloat((value1 * value2).toFixed(5));
-  } else if (sinal == "%") {
-    calcDisplay.textContent = parseFloat(((value2 * value1) / 100).toFixed(5));
+  if (value1 !== 0) {
+    if (sinal == "+") {
+      calcDisplay.textContent = parseFloat((value1 + value2).toFixed(5));
+    } else if (sinal == "-") {
+      calcDisplay.textContent = parseFloat((value1 - value2).toFixed(5));
+    } else if (sinal == "/") {
+      calcDisplay.textContent = parseFloat((value1 / value2).toFixed(5));
+    } else if (sinal == "x") {
+      calcDisplay.textContent = parseFloat((value1 * value2).toFixed(5));
+    } else if (sinal == "%") {
+      calcDisplay.textContent = parseFloat(
+        ((value2 * value1) / 100).toFixed(5)
+      );
+    }
   }
 }
 
@@ -118,6 +134,7 @@ calcEqual.addEventListener("click", () => {
   } else {
     equation(value1, operator, +calcDisplay.textContent);
     num1(0);
+    sinal(0);
   }
 });
 
