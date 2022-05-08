@@ -1,5 +1,6 @@
 // variables of calc buttons
 const calcDisplay = document.getElementById("calc-display");
+const calcMiniDisplay = document.getElementById("calc-mini-display");
 const calcNumbers = document.querySelectorAll(".number");
 const calcEquation = document.querySelectorAll(".equation");
 const calcEqual = document.querySelector(".equal");
@@ -41,7 +42,6 @@ function changeText() {
 calcNumbers.forEach((button) =>
   button.addEventListener("click", function () {
     if (calcDisplay.textContent.length < 8) {
-      calcDisplay.textContent = "";
       let tecla = button.textContent;
       calcDisplay.textContent += tecla;
     }
@@ -68,7 +68,8 @@ calcEquation.forEach((button) =>
       num1(+calcDisplay.textContent, "%");
       sinal("%");
     }
-    calcDisplay.textContent = value1;
+    calcDisplay.textContent = "";
+    calcMiniDisplay.textContent = value1;
   })
 );
 
@@ -103,20 +104,22 @@ let sinal = (value) => {
 function equation(value1, sinal, value2) {
   if (value1 !== 0) {
     if (sinal == "+") {
-      result = calcDisplay.textContent = parseFloat(
-        (value1 + value2).toFixed(5)
-      );
+      result = parseFloat((value1 + value2).toFixed(5));
+      calcDisplay.textContent = result;
     } else if (sinal == "-") {
-      calcDisplay.textContent = parseFloat((value1 - value2).toFixed(5));
+      result = parseFloat((value1 - value2).toFixed(5));
+      calcDisplay.textContent = result;
     } else if (sinal == "/") {
-      calcDisplay.textContent = parseFloat((value1 / value2).toFixed(5));
+      result = parseFloat((value1 / value2).toFixed(5));
+      calcDisplay.textContent = result;
     } else if (sinal == "x") {
-      calcDisplay.textContent = parseFloat((value1 * value2).toFixed(5));
+      result = parseFloat((value1 * value2).toFixed(5));
+      calcDisplay.textContent = result;
     } else if (sinal == "%") {
-      calcDisplay.textContent = parseFloat(
-        ((value2 * value1) / 100).toFixed(5)
-      );
+      result = parseFloat(((value2 * value1) / 100).toFixed(5));
+      calcDisplay.textContent = result;
     }
+    calcMiniDisplay.textContent = result;
   }
 }
 
@@ -139,9 +142,11 @@ calcEqual.addEventListener("click", () => {
     num1(0);
     sinal(0);
   }
+  calcMiniDisplay.textContent = "";
 });
 
 // calculator clear
 calcClear.addEventListener("click", () => {
   calcDisplay.textContent = "";
+  calcMiniDisplay.textContent = "";
 });

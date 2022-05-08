@@ -42,7 +42,25 @@ input {
   background-color: transparent;
   border-radius: 50px;
   margin-left: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  box-shadow: inset 3px 3px 1px rgba(0, 0, 0, 0.295),
+    inset -3px -3px 1px rgba(255, 255, 255, 0.295);
+}
+
+.calc-display-flex {
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+}
+
+.calc-mini-display {
+  width: 80px;
+  height: 20px;
+  padding: 5px 10px;
+  text-align: end;
+  background-color: transparent;
+  border-radius: 50px;
+  margin-left: 10px;
   box-shadow: inset 3px 3px 1px rgba(0, 0, 0, 0.295),
     inset -3px -3px 1px rgba(255, 255, 255, 0.295);
 }
