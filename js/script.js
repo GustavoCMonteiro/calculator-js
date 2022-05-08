@@ -41,6 +41,7 @@ function changeText() {
 calcNumbers.forEach((button) =>
   button.addEventListener("click", function () {
     if (calcDisplay.textContent.length < 8) {
+      calcDisplay.textContent = "";
       let tecla = button.textContent;
       calcDisplay.textContent += tecla;
     }
@@ -67,7 +68,7 @@ calcEquation.forEach((button) =>
       num1(+calcDisplay.textContent, "%");
       sinal("%");
     }
-    calcDisplay.textContent = "";
+    calcDisplay.textContent = value1;
   })
 );
 
@@ -102,7 +103,9 @@ let sinal = (value) => {
 function equation(value1, sinal, value2) {
   if (value1 !== 0) {
     if (sinal == "+") {
-      calcDisplay.textContent = parseFloat((value1 + value2).toFixed(5));
+      result = calcDisplay.textContent = parseFloat(
+        (value1 + value2).toFixed(5)
+      );
     } else if (sinal == "-") {
       calcDisplay.textContent = parseFloat((value1 - value2).toFixed(5));
     } else if (sinal == "/") {
