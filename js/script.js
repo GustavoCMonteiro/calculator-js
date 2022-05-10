@@ -21,6 +21,7 @@ function toggleDark() {
   bgBody.classList.toggle("bg-dark");
   calcBody.classList.toggle("calc-bg-dark");
   calcDisplay.classList.toggle("button-dark");
+  calcMiniDisplay.classList.toggle("button-dark");
   calcNumbers.forEach((i) => i.classList.toggle("button-dark"));
   calcEquation.forEach((i) => i.classList.toggle("sp-button-dark"));
   calcEqual.classList.toggle("sp-button-dark");
