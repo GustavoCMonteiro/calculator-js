@@ -1,9 +1,3 @@
-# calculator-js
- Calculator made in JavaScript
-
-https://gustavocmonteiro.github.io/calculator-js/
-
-
 # Projeto Pessoal de uma calculadora feita com JavaScript puro!
 
 ## Link da Demo do site : [Calculadora](https://gustavocmonteiro.github.io/calculator-js/)
