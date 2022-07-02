@@ -11,10 +11,13 @@
   </a>
 </div>  
   
- 
 ## Descrição
 
 ### Projeto desenvolvido com o objetivo de treinar os meus conhecimentos em JavaScript, e também para servir de portfólio.
+
+<br>
+<img height="500em" src="https://github.com/GustavoCMonteiro/calculator-js/blob/main/css/calculadora.gif"/>
+<br>
 
 ## JavaScript
 
